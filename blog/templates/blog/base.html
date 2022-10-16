@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<!--Blog's base.html-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Daniel Atanasov Aka. Varmilo">
+    <meta name="description" content="My portfolio and coding blog made with Django">
+    <meta name="robots" content="index">
+    <meta name="keywords" content="Django, Python, HTML, coding, CSS, Junior, Developer">
+    <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+    <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
+    {% if request.path == '/index/' %}
+        <title>Blog</title>    
+    {% endif %}
+</head>
+<body>
+    <header>
+        <nav>
+            <li>
+                <h1>Varmilo's coding blog</h1>
+            </li>
+            <li>
+                <!--Insert here image that redirects the user to the main page-->
+                <a href="{% url 'blog:index' %}">Main</a>
+            </li>
+        </nav>
+    </header>
+    <footer>
+        <p>Created by Daniel Atanasov Aka. Varmilo</p>
+    </footer>
+</body>
+{% block content %}{% endblock content %}
+</html>
