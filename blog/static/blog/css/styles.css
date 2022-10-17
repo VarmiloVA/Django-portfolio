@@ -6,6 +6,20 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+body {
+    background-color: lightblue;
+}
+
+/*I'm just testing colors to learn CSS3, it isn't definitive*/
+h2 {
+    color: white;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+
 footer {
     text-align: center;
 }
