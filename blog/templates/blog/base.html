@@ -10,7 +10,7 @@
     <meta name="keywords" content="Django, Python, HTML, coding, CSS, Junior, Developer">
     <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
     <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
-    {% if request.path == '/index/' %}
+    {% if request.path == '' %}
         <title>Blog</title>    
     {% endif %}
 </head>
@@ -26,9 +26,10 @@
             </li>
         </nav>
     </header>
+    {% block content %}{% endblock content %}
     <footer>
+        <hr>
         <p>Created by Daniel Atanasov Aka. Varmilo</p>
     </footer>
 </body>
-{% block content %}{% endblock content %}
 </html>
