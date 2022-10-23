@@ -2,24 +2,24 @@ from xml.sax.handler import EntityResolver
 from django.db import models
 
 # Create your models here.
-class Topic(models.Model):
+class Post(models.Model):
     """Code-related topic that I'm learning about"""
-    text = models.CharField(max_length=255)
+    title = models.CharField(max_length=255)
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        """Returns a representation of the topic"""
-        return self.text
+        """Returns a representation of the post"""
+        return self.title
 
-class Entry(models.Model):
+class Content(models.Model):
     """What I've learned about a topic"""
-    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
-    text = models.TextField()
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    content = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name_plural = "entries"
+        verbose_name_plural = "contents"
     
     def __str__(self):
-        """Returns a representation of the entry"""
-        return f"{self.text[:50]}"
+        """Returns a representation of the post's content"""
+        return f"{self.content[:50]}"
