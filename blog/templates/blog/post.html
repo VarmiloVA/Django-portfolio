@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<!--Determinated post-->
+<body>
+    <p>{{ post }}</p>
+    <p>Content:</p>
+
+    <ul>
+        {% for content in post %}
+        <li>
+            <p>{{ content.date_added|date:'M d, Y H:i' }}</p>
+            <p>{{ content.text|linebreaks }}</p>
+        </li>
+        {% empty %}
+        <li>
+            Work in progress, no content available yet.
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+{% endblock content %}

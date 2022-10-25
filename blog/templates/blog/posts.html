@@ -2,10 +2,17 @@
 {% block content %}
 <!DOCTYPE html>
 <html>
-
-    <body>
-        <p>Post.html works!</p>
-    </body>
-
+<!--Posts history-->
+<body>
+    <p>Posts</p>
+    
+    <ul>
+        {% for post in posts %}
+            <li>{{ post }}</li>
+        {% empty %}
+            <li>Work in progress, no posts yet.</li>
+        {% endfor %}
+    </ul>
+</body>
 </html>
 {% endblock content %}

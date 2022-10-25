@@ -10,10 +10,13 @@
     <meta name="keywords" content="Django, Python, HTML, coding, CSS, Junior, Developer">
     <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
     <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
-    {% if request.path == "/about_me/" %}
-        <title>About me</title>
+    {% if request.path == "blog/index/" %}
+        <title>Home</title>
+    {% elif request.path == "/blog/posts/" %}
+        <title>Posts</title>
     {% else %}
-        <title>Home</title> 
+        <!-- <a>{{ request.path }}</a> -->
+        <title>Blog</title>
     {% endif %}
 </head>
 <body>
