@@ -1,5 +1,0 @@
-*_requirements.txt
-*.venv/
-*migrations/
-*__pycache__/
-*.sql*
