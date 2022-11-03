@@ -5,3 +5,6 @@ _requirements.txt
 #Python and Django files
 */__pycache__/
 */migrations/
+
+#DB
+db.sqlite3
