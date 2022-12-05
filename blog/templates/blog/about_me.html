@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 {% extends "blog/base.html" %}
+{% load static %}
 {% block content %}
 <body>
-    <img align="center" src="img/logo.png">
+    <a align="center"><img src="{% static 'blog/img/logo.ico' %}" alt="logo" height="200px" /></a>
     <h2>Who writes this posts?</h2>
     <p>The answer is...</p>
 </body>

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 {% extends "blog/base.html" %}
+{% load static %}
 {% block content %}
 <body>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">click here</a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="{% static 'blog/img/rick_roll.png' %}" /></a>
 </body>
 {% endblock content %}
 </html>
