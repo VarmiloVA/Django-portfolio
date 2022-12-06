@@ -1,0 +1,23 @@
+/* Clear browser cache after making changes :) */
+
+.center {
+    text-align: center;
+}
+
+p {
+    color: #44f;
+}
+
+#fullwidth {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: relative;
+    margin: auto 0;
+}
+
+.container img {
+    width: 250px;
+    height: auto;
+    position: relative;   
+}
