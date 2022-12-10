@@ -5,99 +5,60 @@
 }
 
 body.about_me {
-    color: #40514e; 
+    color: #e0f1ee; 
+    background-color: #222;
 }
 
-#title {
-    color: #000;
-    text-align: center;
-    /* background-color: #849dc4;
-    width: 70em; */
-    margin: auto;
-    font-weight: normal;
-    /* border-style: none;
-    border-radius: 15px; */
-    font-family: 'Sacramento', cursive;
+h1 {
+    font-size: 1.8em;
 }
-
-.section_title {
-    width: 20em;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: top left;
-    margin: auto;
-    text-align: center;
-    border-style: none;
-    border-radius: 8px
-}
-
-/*
-.section {
-    width: 75em;
-    height: auto;
-    margin: auto;
-    border-style: none;
-    border-radius: 6px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
-    text-align: center;
-}
-*/
 
 div.programmer_gif {
     margin: auto;
-    margin-top: 50px;
     text-align: center;
     float: left;
 }
 
 img.programmer_gif {
-    height: 25em;
+    width: 72%;
     border-style: none;
     border-radius: 150px;
 }
 
-#hability_image {
-    margin: auto;
-    width: 31em;
-    border-style: none;
-    border-radius: 10px;
-}
-
-hr.dots {
-    border: dotted #EAF6F6 10px;
-    border-bottom: none;
-    width: 6%;
-    margin: 80px auto;
-}
-
-hr.title {
-    border-top: dashed #0000af 2px;
-    border-width: 60%;
-    stroke-width: 10em;
-    width: 70%;
-    margin: 1px auto;
-    float: right;
+#title {
+    color: #66f;
+    text-align: center;
+    /* background-color: #849dc4;
+    width: 70em; */
+    margin: 5em 13% auto auto;
+    font-weight: normal;
+    /* border-style: none;
+    border-radius: 15px; */
+    font-family: 'Sacramento', cursive;
+    text-decoration: underline;
+    text-decoration-color: #335;
+    text-decoration-style: wavy;
 }
 
 div.introduction {
     text-align: center;
-    width: 60em;
-    margin: auto;
-    margin-top: 30px;
+    width: 50em;
+    margin: auto 30%;
+    float: left;
     border-style: none;
-    border-radius: 8px;
-    padding: 3px 20px;
-    background-color: #EAF6F6;
+    border-radius: 10px;
+    padding: 3px 20px;  
+    position: absolute;
 }
 
+hr.dots {
+    border: dotted #335 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 80px auto;
+    position: relative;
+}
 
-
-/*anotación para imágenes de skills
-no hace falta {% %} ya que están en este 
-mismo directorio*/
-
-/*text decoration:
-https://www.w3schools.com/cssref/pr_text_text-decoration.php*/
+/*text decoration info:
+https://www.w3schools.com/cssref/pr_text_text-decoration.php
+*/
