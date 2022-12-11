@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+<body class="topics">
+    <h2 id="title">Topics</h2>
+
+    <ul class="topics">
+    {% for topic in topics %}
+        <li>{{ topic }}</li>
+    {% empty %}
+        <li>No topics have been added yet.</li>
+    {% endfor %}
+    </ul>
+
+</body>
+{% endblock content %}
+</html>

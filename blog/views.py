@@ -1,14 +1,21 @@
 from django.shortcuts import render
-from .models import Topic, Content
+from .models import Topic
 
 def index(request):
     """Blog main page"""
     return render(request, 'blog/index.html')
 
-def topic(request):
+def topics(request):
     """All topics"""
     topics = Topic.objects.order_by('date_added')
-    context = {'#ver para que sirve en el libro'}
+    context = {'topics': topics}
+    return render(request, 'blog/topics.html', context)
+
+def topic(request, topic_id):
+    """Shows individually a topic"""                          
+    topic = Topic.objects.get(id=topic_id)
+    entries = topic.entry_set.order_by('-date_added')     
+    context = {'topic': topic, 'entries': entries}
     return render(request, 'blog/topic.html', context)
 
 def about_me(request):
