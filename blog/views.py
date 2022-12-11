@@ -19,5 +19,5 @@ def topic(request, topic_id):
     return render(request, 'blog/topic.html', context)
 
 def about_me(request):
-    """Who's writting this?"""
+    """About me page"""
     return render(request, 'blog/about_me.html')

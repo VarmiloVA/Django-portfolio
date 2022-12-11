@@ -10,7 +10,7 @@
     <ul class="entries">
     {% for entry in entries %}
         <li>
-            <p class="date_added">{{ entry.date_added | date:'yyyy-MM-dd' }}</p>
+            <p class="date_added">{{ entry.date_added | date:'d M [Y]' }}</p>
             <p class="entry-content">{{ entry.text | linebreaks }}</p>
         </li>
     {% empty %}
