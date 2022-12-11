@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<!--The  portfolio itself-->
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% block content %}
+<body>
+    <div class="header">
+        <img class="photo" href="https://www.linkedin.com/in/daniel-atanasov-angelov-703a16217/" src="{% static 'portfolio/img/photo.jpg' %}" alt="Redirect to LinkedIn" />
+        <h1 class="title">First, I'll introduce myself</h1>
+    </div>
+    
+    <div class="introduction">
+        <p>
+            My name is Daniel and I'm a 16yo self-taught programmer
+        </p>
+        <p>
+            I've been coding for 2 years with some breaks because I'm still in high school in the path to do CS bachelor's degree
+        </p>
+    </div>
+</body>
+{% endblock content %}
+</html>

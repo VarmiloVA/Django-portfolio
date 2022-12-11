@@ -1,0 +1,33 @@
+* {
+    background-color: #222;
+    color: #ccd;
+    font-family: Cascadia Code Semibold;
+}
+
+img.photo {
+    width: 20%;
+    border-style: none;
+    border-radius: 300px;
+
+}
+
+div.header {
+    text-align: center;
+    position: relative;
+    margin: auto;
+}
+
+h1.title {
+    color: #aad;
+    border-bottom-style: dashed;
+    border-bottom-color: #ccd;
+    width: 50%;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+div.introduction {
+    width: 65%;
+    text-align: center;
+    margin: 2rem auto
+}
