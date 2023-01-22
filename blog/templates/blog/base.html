@@ -9,9 +9,16 @@
     <meta name="robots" content="noindex" />
     <link rel="icon" href="{% static 'blog/img/favicon.ico'%}" />
     <link rel="stylesheet" href="{% static 'blog/css/styles.css'%}" />
-    <!--
-	{ if  } use if to change title to diferent pages
-    -->
+    
+	{% if request.get_full_path == '/blog/' %}
+        <title>Index</title>
+    {% elif request.get_full_path == '/blog/topics/' %}
+        <title>Topics</title>
+    {% elif request.get_full_path == '/blog/topic/' %}
+        <title>{{ Topic.topic_id }}</title>
+    {% else %}
+        <title>URLs're wrong</title>
+    {% endif %}
 
 </head>
 

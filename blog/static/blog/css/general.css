@@ -1,0 +1,8 @@
+/* General styles for all css archives */
+* {
+    font-family: Cascadia Code;
+}
+
+h1 {
+    font-size: 1.8em;
+}

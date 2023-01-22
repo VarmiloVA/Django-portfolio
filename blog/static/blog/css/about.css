@@ -1,12 +1,4 @@
-/* Clear browser cache after making changes :) */
-
-* {
-    font-family: Cascadia Code;
-}
-
-h1 {
-    font-size: 1.8em;
-}
+/* About me page related styles */
 
 body.about_me {
     color: #e0f1ee; 
