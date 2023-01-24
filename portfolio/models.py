@@ -1,6 +1,6 @@
 from django.db import models
 
-class Projects(models.Model):
+class Project(models.Model):
     """My projects"""
     title = models.CharField(max_length=255)
     link = models.TextField()
