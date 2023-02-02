@@ -3,7 +3,7 @@
 {% extends "blog/base.html" %}
 {% load static %}
 <head>
-    {% block extend_head %}<link rel="stylesheet" href="{% static 'blog/css/about.css' %}" /> {% endblock %}
+    {% block extra_head %}<link rel="stylesheet" href="{% static 'blog/css/about.css' %}" /> {% endblock %}
     {% block title %} <title>About me</title> {% endblock %}
 </head>
 {% block content %}
