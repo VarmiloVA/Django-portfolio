@@ -3,7 +3,13 @@
 {% extends "blog/base.html" %}
 {% load static %}
 {% block content %}
-<body classs="topic">
+<head>
+    <title>{{ topic }}</title>
+    <link rel="stylesheet" href="{% static 'blog/css/topic.css'%}" />
+</head>
+
+<body class="topic">
+    
     <h2 id="title">{{ topic }}</h2>
 
     <h4 id="subtitle">Contents</h4>
