@@ -4,8 +4,8 @@
 {% load static %}
 {% block content %}
 <head>
-    <link rel="stylesheet" href="{% static 'blog/css/topics.css'%}" />
-    <title>Topics</title>
+    {% block extra_head %} <link rel="stylesheet" href="{% static 'blog/css/topics.css'%}" /> {% endblock %}
+    {% block title %} <title>Topics</title> {% endblock %}
 </head>
 
 <body class="topics">

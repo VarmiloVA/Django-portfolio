@@ -2,6 +2,10 @@
 <html>
 {% extends "blog/base.html" %}
 {% load static %}
+<head>
+    {% block extend_head %}<link rel="stylesheet" href="{% static 'blog/css/about.css' %}" /> {% endblock %}
+    {% block title %} <title>About me</title> {% endblock %}
+</head>
 {% block content %}
 <body class="about_me">
     <div class="intro_content">

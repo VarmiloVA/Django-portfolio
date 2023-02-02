@@ -2,12 +2,13 @@
 <html>
 {% extends "blog/base.html" %}
 {% load static %}
-{% block content %}
+
 <head>
-    <title>{{ topic }}</title>
-    <link rel="stylesheet" href="{% static 'blog/css/topic.css'%}" />
+    {% block extra_head %}<link rel="stylesheet" href="{% static 'blog/css/topic.css'%}" /> {% endblock %}
+    {% block title %}<title>{{ topic }}</title>{% endblock %}
 </head>
 
+{% block content %}
 <body class="topic">
     
     <h2 id="title">{{ topic }}</h2>

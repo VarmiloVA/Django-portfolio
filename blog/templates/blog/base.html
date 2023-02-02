@@ -9,6 +9,8 @@
     <meta name="robots" content="noindex" />
     <link rel="icon" href="{% static 'blog/img/favicon.ico'%}" />
     <link rel="stylesheet" href="{% static 'blog/css/base.css'%}" />
+    {% block extra_head %}{% endblock %}
+    {% block title %} {% endblock title %}
 </head>
 
 {% block content %}
