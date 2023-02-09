@@ -8,3 +8,6 @@ _requirements.txt
 
 #DB
 db.sqlite3
+
+#Others
+/svg
