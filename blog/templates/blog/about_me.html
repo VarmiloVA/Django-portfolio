@@ -3,7 +3,7 @@
 {% extends "blog/base.html" %}
 {% load static %}
 <head>
-    {% block extra_head %}<link rel="stylesheet" href="{% static 'blog/css/about.css' %}" /> {% endblock %}
+    {% block extra_head %}<link rel="stylesheet" href="{% static '/blog/css/about.css' %}" /> {% endblock %}
     {% block title %} <title>About me</title> {% endblock %}
 </head>
 {% block content %}
@@ -26,6 +26,10 @@
             I'm not sure yet, but I know I wanna be a programmer.
         </p>
     </div>
+    
+    <div class="stats">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=VarmiloVA&theme=dracula" />
+    </div>
 
     <hr class="dots"/>
 
@@ -34,6 +38,7 @@
         <a class="footer-link" href="https://github.com/VarmiloVA">GitHub</a>
         <a class="footer-link" href="#">Portfolio</a>
     </div>
+    
 </div>
 <!--
     Poner antes de contact info una sección de "me as a developer" en

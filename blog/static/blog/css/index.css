@@ -4,3 +4,7 @@ h1, h2 {
     text-align: center;
     position: fixed;
 }
+
+body {
+    color: #e0f1ee;
+}

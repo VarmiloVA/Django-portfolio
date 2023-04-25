@@ -4,7 +4,10 @@
 {% load static %}
 
 <head>
-    {% block extra_head %}<link rel="stylesheet" href="{% static 'blog/css/topic.css'%}" /> {% endblock %}
+    {% block extra_head %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'blog/css/topic.css' %}" /> 
+    {% endblock %}
     {% block title %}<title>{{ topic }}</title>{% endblock %}
 </head>
 
@@ -12,14 +15,14 @@
 <body class="topic">
     
     <h2 id="title">{{ topic }}</h2>
-
-    <h4 id="subtitle">Contents</h4>
+    <hr class="undertitle"/>
+    <h4 id="subtitle">Posts</h4>
     <ul class="entries">
     {% for entry in entries %}
         <li>
             <p class="date_added">{{ entry.date_added | date:'d M [Y]' }}</p>
             <p class="entry-content">{{ entry.text | linebreaks }}</p>
-        </li>
+    º</li>
     {% empty %}
         <li>No entries for this topic yet.</li>
     {% endfor %}
