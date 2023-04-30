@@ -7,7 +7,7 @@ class Topic(models.Model):
 
     def __str__(self):
         """Returns a representation of the topic"""
-        return self.title
+        return self.title.capitalize()
 
 class Entry(models.Model):
     """An entry made about a topic"""
