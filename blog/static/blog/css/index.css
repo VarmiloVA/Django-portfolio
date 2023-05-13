@@ -1,10 +1,12 @@
 /* Index page styles */
 
-h1, h2 {
-    text-align: center;
-    position: fixed;
+div.welcome {
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: blue;
 }
 
-body {
-    color: #e0f1ee;
+h1, h2 {
+   color: yellowgreen;
 }
