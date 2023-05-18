@@ -1,12 +1,7 @@
 /* Index page styles */
-
-div.welcome {
-    position: relative;
-    width: auto;
-    height: auto;
-    background-color: blue;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2 {
-   color: yellowgreen;
-}
+/* rotar svg https://stackoverflow.com/questions/33186431/rotate-svg-path-using-css */

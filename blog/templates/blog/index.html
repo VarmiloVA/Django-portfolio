@@ -7,16 +7,73 @@
     {% block extra_head %} 
     {{ block.super }}
     <link rel="stylesheet" href="{% static 'blog/css/index.css' %}" /> 
+
     {% endblock %}
-    {% block title %} <title>Index</title> {% endblock %}
+    {% block title %} <title>Homepage</title> {% endblock %}
 </head>
 
 {% block content %}
 <body>
-    
-    <div class="welcome">
-        <h1>Welcome, this is my personal blog</h1>
-        <h2>here I'll be posting about many topics such as coding, f1, boxing...</h2>
+    <div class="overlay"></div>
+    <div class="wrapper">
+        <header>
+            <a href="index.html" src="{% static 'blog/img/logo.png' %}" alt="Varmilo logo"></a>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="topics.html">Topics</a></li>
+                <li><a href="about_me.html">About me</a></li>
+            </ul>
+        </header>
+
+        <main>
+            <div class="blog">
+                <div class="intro">
+                    <h1>Dani's blog</h1>
+                    <p class="subhead">
+                        Welcome to my blog, I'll be posting articles about 
+                        various topics such as coding, f1 and boxing.
+                    </p>
+                    <svg viewBox="0 0 19 9" fill="none">
+                            <path d="M18.3536 4.85355C18.5488 4.65829 18.5488 4.34171 18.3536 4.14645L15.1716 0.964466C14.9763 0.769204 14.6597 0.769204 14.4645 0.964466C14.2692 1.15973 14.2692 1.47631 14.4645 1.67157L17.2929 4.5L14.4645 7.32843C14.2692 7.52369 14.2692 7.84027 14.4645 8.03553C14.6597 8.2308 14.9763 8.2308 15.1716 8.03553L18.3536 4.85355ZM0 5H18V4H0V5Z" fill="black"/>
+                    </svg>
+                </div>
+                <div class="topics">
+                    <div class="topic1">
+                        <!--Boxing as topic has id=4-->
+                        <a href="{% url 'blog:topic' topic_id=4 %}">
+                            <img src="{% static 'blog/img/grant.png' %}" />
+                        </a>
+                        <div class="topic-details">
+                            <p>Boxing</p>
+                        </div>
+                    </div>
+
+                    <div class="topic1">
+                        <!--Motorsport as topic has id=2-->
+                        <a href="{% url 'blog:topic' topic_id=2 %}">
+                            <img src="{% static 'blog/img/motorsport.png' %}" />
+                        </a>
+                        <div class="topic-details">
+                            <p>Motorsport</p>
+                        </div>
+                    </div>
+
+                    <div class="topic1">
+                        <!--Data as topic has id=1-->
+                        <a href="{% url 'blog:topic' topic_id=1 %}">
+                            <img src="{% static 'blog/img/data.png' %}" />
+                        </a>
+                        <div class="topic-details">
+                            <p>Data</p>
+                        </div>
+                    </div>
+                    
+                    <div class="other-topics">
+                        <a href="{% url 'blog:topics' %}">
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 
 </body>
