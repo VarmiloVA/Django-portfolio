@@ -4,4 +4,12 @@
     padding: 0;
 }
 
+html {
+    background-color: #ededed;
+}
+
 /* rotar svg https://stackoverflow.com/questions/33186431/rotate-svg-path-using-css */
+
+.links a{
+    display: block;
+}

@@ -37,45 +37,66 @@
                             <path d="M18.3536 4.85355C18.5488 4.65829 18.5488 4.34171 18.3536 4.14645L15.1716 0.964466C14.9763 0.769204 14.6597 0.769204 14.4645 0.964466C14.2692 1.15973 14.2692 1.47631 14.4645 1.67157L17.2929 4.5L14.4645 7.32843C14.2692 7.52369 14.2692 7.84027 14.4645 8.03553C14.6597 8.2308 14.9763 8.2308 15.1716 8.03553L18.3536 4.85355ZM0 5H18V4H0V5Z" fill="black"/>
                     </svg>
                 </div>
-                <div class="topics">
-                    <div class="topic1">
+                <div class="links">
+                    <div class="specific-topics">
                         <!--Boxing as topic has id=4-->
                         <a href="{% url 'blog:topic' topic_id=4 %}">
-                            <img src="{% static 'blog/img/grant.png' %}" />
+                            <div class="topic1">
+                        
+                                <div class="topic-details">
+                                    <p>Boxing</p>
+                                </div>
+                            </div>
                         </a>
-                        <div class="topic-details">
-                            <p>Boxing</p>
-                        </div>
-                    </div>
+                    
 
-                    <div class="topic1">
                         <!--Motorsport as topic has id=2-->
                         <a href="{% url 'blog:topic' topic_id=2 %}">
-                            <img src="{% static 'blog/img/motorsport.png' %}" />
+                            <div class="topic2">
+                                <div class="topic-details">
+                                    <p>Motorsport</p>
+                                </div>
+                            </div>
                         </a>
-                        <div class="topic-details">
-                            <p>Motorsport</p>
-                        </div>
-                    </div>
-
-                    <div class="topic1">
+                    
+                    
                         <!--Data as topic has id=1-->
                         <a href="{% url 'blog:topic' topic_id=1 %}">
-                            <img src="{% static 'blog/img/data.png' %}" />
+                            <div class="topic3">
+                                <div class="topic-details">
+                                    <p>Data</p>
+                                </div>
+                            </div> 
                         </a>
-                        <div class="topic-details">
-                            <p>Data</p>
-                        </div>
                     </div>
                     
                     <div class="other-topics">
-                        <a href="{% url 'blog:topics' %}">
+                        <a href="{% url 'blog:topics' %}">More topics</a>
+                    </div>
+                    
+                    <div class="other-links">
+                        <!-- <a href=" url 'portfolio:about' "> -->
+                        <a href="#">
+                            <div class="about-me">
+                                <div class="about-details">
+                                    <p>About me</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- <a href=" url 'portfolio:portfolio' "> -->
+                        <a href="#">
+                            <div class="portfolio">
+                                <div class="portfolio-details">
+                                    <p>My portfolio</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
 </body>
 {% endblock content %}
 </html>
