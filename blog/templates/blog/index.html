@@ -19,9 +19,9 @@
         <header>
             <a href="index.html" src="{% static 'blog/img/logo.png' %}" alt="Varmilo logo"></a>
             <ul>
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="topics.html">Topics</a></li>
-                <li><a href="about_me.html">About me</a></li>
+                <li><a class="active" href="{% url 'blog:index' %}">Home</a></li>
+                <li><a href="{% url 'blog:topics' %}">Topics</a></li>
+                <li><a href="#">About me</a></li>
             </ul>
         </header>
 
@@ -38,60 +38,44 @@
                     </svg>
                 </div>
                 <div class="links">
+                <!-- modificar los divs clickeables
+                https://stackoverflow.com/questions/8160494/how-to-make-a-whole-div-clickable-in-html-and-css-without-javascript -->
                     <div class="specific-topics">
                         <!--Boxing as topic has id=4-->
-                        <a href="{% url 'blog:topic' topic_id=4 %}">
-                            <div class="topic1">
-                        
+                        <div class="topic1">
+                            <a href="{% url 'blog:topic' topic_id=4 %}">
                                 <div class="topic-details">
                                     <p>Boxing</p>
-                                </div>
-                            </div>
-                        </a>
+                                </div>     
+                            </a>
+                        </div>
                     
 
                         <!--Motorsport as topic has id=2-->
-                        <a href="{% url 'blog:topic' topic_id=2 %}">
-                            <div class="topic2">
+                        <div class="topic2">
+                             <a href="{% url 'blog:topic' topic_id=2 %}">
                                 <div class="topic-details">
                                     <p>Motorsport</p>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
+                        
                     
                     
                         <!--Data as topic has id=1-->
-                        <a href="{% url 'blog:topic' topic_id=1 %}">
-                            <div class="topic3">
+                        
+                        <div class="topic3">
+                            <a href="{% url 'blog:topic' topic_id=1 %}">
                                 <div class="topic-details">
                                     <p>Data</p>
                                 </div>
-                            </div> 
-                        </a>
+                            </a>
+                        </div> 
+                        
                     </div>
                     
                     <div class="other-topics">
                         <a href="{% url 'blog:topics' %}">More topics</a>
-                    </div>
-                    
-                    <div class="other-links">
-                        <!-- <a href=" url 'portfolio:about' "> -->
-                        <a href="#">
-                            <div class="about-me">
-                                <div class="about-details">
-                                    <p>About me</p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <!-- <a href=" url 'portfolio:portfolio' "> -->
-                        <a href="#">
-                            <div class="portfolio">
-                                <div class="portfolio-details">
-                                    <p>My portfolio</p>
-                                </div>
-                            </div>
-                        </a>
                     </div>
                 </div>
             </div>
