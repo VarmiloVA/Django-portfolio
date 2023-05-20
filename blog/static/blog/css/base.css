@@ -1,8 +1,6 @@
-/* General styles for all css archives */
 * {
     font-family: 'Poppins';
-}
-
-* {
     background-color: white;
+    margin: 0;
+    padding: 0;
 }

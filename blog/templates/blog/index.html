@@ -14,15 +14,16 @@
 
 {% block content %}
 <body>
-    <div class="overlay"></div>
     <div class="wrapper">
         <header>
-            <a href="index.html" src="{% static 'blog/img/logo.png' %}" alt="Varmilo logo"></a>
-            <ul>
-                <li><a class="active" href="{% url 'blog:index' %}">Home</a></li>
-                <li><a href="{% url 'blog:topics' %}">Topics</a></li>
-                <li><a href="#">About me</a></li>
-            </ul>
+            <a href="{% url 'blog:index' %}" class="logo" alt="Varmilo logo"><img class="logo" src="{% static 'blog/img/logo.png' %}"/></a>
+            <nav>
+                <ul>
+                    <li><a class="active" href="{% url 'blog:index' %}">Home</a></li>
+                    <li><a href="{% url 'blog:topics' %}">Topics</a></li>
+                    <li><a href="#">About me</a></li>
+                </ul>
+            </nav> 
         </header>
 
         <main>

@@ -1,15 +1,66 @@
-/* Index page styles */
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    background-color: #ededed;
-}
-
 /* rotar svg https://stackoverflow.com/questions/33186431/rotate-svg-path-using-css */
 
-.links a{
-    display: block;
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 10em;
+}
+ 
+img.logo {
+    margin: 2em auto;
+    height: 6em;
+} 
+
+nav {
+    margin: 4em 2em;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 4em;
+    margin: 0;
+}
+
+nav a{
+    text-decoration: none;
+    color: #5d5d5d;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    position: relative;
+}
+
+nav a.active {
+    color: black;
+}
+
+nav a.active:before {
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: 0px;
+}
+
+nav a:before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid #5d5d5d;
+    bottom: 0px;
+    transition: width .3s;
+}
+
+nav ul li a:hover:before {
+    width: 35%;
 }
