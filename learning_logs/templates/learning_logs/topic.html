@@ -1,5 +1,8 @@
 {% extends 'learning_logs/base.html' %}
 {% block content %}
+<header>
+    {% include 'navbar.html' %}
+</header>
 <main>
     <h1>{{ topic }}</h1>
     {% for entry in entries %}
