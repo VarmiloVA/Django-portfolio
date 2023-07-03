@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <title>Blog</title>
+    <link rel="stylesheet" href="{% static 'learning_logs/base.css' %}"
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a target="_blank" href="{% url 'learning_logs:index' %}">Home</a></li>
+            <li><a target="_blank" href="{% url 'learning_logs:topics' %}">Topics</a></li>
+        </ul>
+    </nav>
     {% block content %}
     {% endblock %}
 </body>

@@ -8,4 +8,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     #Topics page
     path('topics/', views.topics, name='topics'),
+    #Topic entries
+    path('topic/<int:topic_id>/', views.topic , name='topic')
 ]
